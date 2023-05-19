@@ -1,4 +1,4 @@
-
+@smoke
 Feature: Token
 
   Scenario: Generate Token
