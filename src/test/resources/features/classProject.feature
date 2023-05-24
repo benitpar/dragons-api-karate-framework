@@ -18,7 +18,6 @@ And request
 """
 [
   {
-    "id": 0,
     "email": "string",
     "title": "string",
     "firstName": "string",
