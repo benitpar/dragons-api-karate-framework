@@ -1,5 +1,5 @@
 
-
+@Regression
 Feature: Phone Number
 
 Background:
@@ -11,11 +11,11 @@ Given url "https://tek-insurance-api.azurewebsites.net"
 
 Scenario: Title of your scenario
 
-* def generateData = Java.type('api.data.GenerateData')
-* def autoPhone = generateData.getPhoneNumber()
-And path "api/accounts/add-account-phone"
-And param primaryPersonId = 7846
+* def generatePhone = Java.type('api.data.GenerateData')
+* def autoPhone = generatePhone.getPhoneNumber()
+And path "/api/accounts/add-account-phone"
 And header Authorization = "Bearer " + generatedToken
+And param primaryPersonId = 8574
 And request
 """
 {
@@ -28,6 +28,7 @@ And request
 When method post
 And status 201
 Then print response
+
 
 
 
